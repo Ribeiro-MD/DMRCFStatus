@@ -251,6 +251,12 @@ let modo='proj',range=0,ocultos=new Set(),tabela=false;
 const LINKS_INICIAIS=['https://www.curseforge.com/minecraft/mc-mods/fish-notifier','https://www.curseforge.com/minecraft/mc-mods/item-seeker',
   'https://www.curseforge.com/minecraft/mc-mods/kick-notifier','https://www.curseforge.com/minecraft/mc-mods/favserver','https://www.curseforge.com/minecraft/mc-mods/immersive-ride','1830252'];
 let fontes=ls.get('cf-fontes',{links:LINKS_INICIAIS,autor:''});
+// listas guardadas antes do DMRecord: o link dele dá 404 no CFWidget, por isso passa ao ID; e entra uma vez em quem ainda não o tinha
+if(ls.get('cf-migracao',0)<1){
+  fontes.links=fontes.links.map(l=>/mc-mods\/dmrecord\/?$/i.test(l.trim())?'1830252':l);
+  if(!fontes.links.some(l=>l.trim()==='1830252'))fontes.links.push('1830252');
+  ls.set('cf-fontes',fontes);ls.set('cf-migracao',1);
+}
 
 const OUTROS='#8a7080';
 function corDe(id){id=String(id);if(!(id in slots)){const usados=new Set(Object.values(slots));let i=0;while(usados.has(i))i++;slots[id]=i<CORES.length?i:-1;ls.set('cf-slots',slots)}
