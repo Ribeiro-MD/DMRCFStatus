@@ -5,4 +5,5 @@ https://www.curseforge.com/minecraft/mc-mods/item-seeker
 https://www.curseforge.com/minecraft/mc-mods/kick-notifier
 https://www.curseforge.com/minecraft/mc-mods/favserver
 https://www.curseforge.com/minecraft/mc-mods/immersive-ride
-https://www.curseforge.com/minecraft/mc-mods/dmrecord
+# DMRecord: pelo link o CFWidget dá 404, por isso vai pelo ID
+1830252
