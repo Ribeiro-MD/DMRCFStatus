@@ -5,3 +5,4 @@ https://www.curseforge.com/minecraft/mc-mods/item-seeker
 https://www.curseforge.com/minecraft/mc-mods/kick-notifier
 https://www.curseforge.com/minecraft/mc-mods/favserver
 https://www.curseforge.com/minecraft/mc-mods/immersive-ride
+https://www.curseforge.com/minecraft/mc-mods/dmrecord
